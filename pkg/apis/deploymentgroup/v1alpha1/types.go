@@ -18,7 +18,7 @@ package v1alpha1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	corev1 "k8s.io/client-go/applyconfigurations/core/v1"
+	corev1 "k8s.io/api/core/v1"
 )
 
 // +genclient
@@ -37,7 +37,7 @@ type DeploymentGroup struct {
 type DeploymentGroupSpec struct {
 	DeploymentName string `json:"deploymentName"`
         Replicas       *int32 `json:"replicas"`
-        // Template corev1.PodTemplateSpec `json:"template"`
+        Template corev1.PodTemplateSpec `json:"template"`
 }
 
 // DeploymentGroupStatus is the status for a DeploymentGroup resource
