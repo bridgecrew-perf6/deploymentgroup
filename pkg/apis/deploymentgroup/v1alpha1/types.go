@@ -37,7 +37,7 @@ type DeploymentGroup struct {
 type DeploymentGroupSpec struct {
 	DeploymentName string `json:"deploymentName"`
         Replicas       *int32 `json:"replicas"`
-        Template corev1.DeploymentSpec `json:"template"`
+        Template corev1.PodTemplateSpec `json:"template"`
 }
 
 // DeploymentGroupStatus is the status for a DeploymentGroup resource
