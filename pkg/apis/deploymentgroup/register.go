@@ -18,5 +18,5 @@ package deploymentgroup
 
 // GroupName is the group name used in this package
 const (
-	GroupName = "synamedia.com"
+	GroupName = "deploymentgroup.synamedia.io"
 )

@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 // +k8s:deepcopy-gen=package
-// +groupName=synamedia.com
+// +groupName=deploymentgroup.synamedia.io
 
 // Package v1alpha1 is the v1alpha1 version of the API.
-package v1alpha1 // import "synamedia.com/deploymentgroup/pkg/apis/deploymentgroup/v1alpha1"
+package v1alpha1 // import "github.com/ssanders1449/deploymentgroup/pkg/apis/deploymentgroup/v1alpha1"

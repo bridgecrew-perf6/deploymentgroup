@@ -35,14 +35,13 @@ type DeploymentGroup struct {
 // DeploymentGroupSpec is the spec for a DeploymentGroup resource
 type DeploymentGroupSpec struct {
 	DeploymentName string `json:"deploymentName"`
-	Replicas       *int32 `json:"replicas"`
+        Replicas       *int32 `json:"replicas"`
+        Template corev1.DeploymentSpec `json:"template"`
 }
 
 // DeploymentGroupStatus is the status for a DeploymentGroup resource
 type DeploymentGroupStatus struct {
-	HPAreplicas int32 `json:"HPAreplicas"`
-        primaryDeployment *appsv1.Deployment `json:"primaryDeployment"`
-        secondaryDeployment *appsv1.Deployment `json:"secondaryDeployment"`
+        AvailableReplicas int32 `json:"AvailableReplicas"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
